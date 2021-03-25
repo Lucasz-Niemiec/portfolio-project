@@ -1,0 +1,193 @@
+* {
+    box-sizing: border-box;
+    margin: 0%;
+}
+
+html {
+    margin: 0%;
+    width: 100%;
+}
+
+/*GENERIC STYLES*/
+
+h1, h2, h3 {
+    font-family: 'Poppins', sans-serif;
+    ;
+}
+
+/*header-navbar*/
+
+header {
+    width: 100%;
+    height: 75x;
+    position: fixed;
+}
+
+.nav-container {
+    width: 100%;
+    background-color: #599eec;
+    height: 100%;
+    display: flex;
+}
+
+#navbar {
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+.nav-list {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+UL {
+    list-style: none;
+}
+
+li {
+    margin: 20px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: black;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 1000;
+}
+
+/*main*/
+
+/*welcome section*/
+
+#welcome-section {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #8db9eb;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 3em;
+}
+
+.second-title {
+    text-align: center;
+}
+
+/*PROJECTS SECTION*/
+
+#projects {
+    background-color: #e4e3f1;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.split {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card-project {
+    margin: 2em;
+    background-color: #599eec;
+    width: 11em;
+    text-align: center;
+}
+
+.projects-link {
+    text-decoration: none;
+    margin: 0%;
+}
+
+a:visited {
+    color: black;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+.project-image {
+    width: 10em;
+    padding: 0.5em 0;
+}
+
+.project-tile {
+    margin: 0%;
+    padding: 0%;
+    padding-bottom: 0.5em;
+    text-align: center;
+    color: #000000;
+    font-family: 'Roboto', sans-serif;
+}
+
+/*COMTACT*/
+
+#contact {
+    background-color: #8db9eb;
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+h3 {
+    font-size: 1em;
+    text-align: center;
+    padding: 40px;
+}
+
+.contac-links {
+    margin-bottom: 20px;
+    font-family: 'Roboto', sans-serif;
+}
+
+#profile-link {
+    text-decoration: none;
+    font-size: 1.5em;
+    font-family: 'Roboto', sans-serif;
+}
+
+/*FOOTER*/
+
+footer {
+    background-color: #599eec;
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    padding: 20px;
+    font-family: 'Roboto', sans-serif;
+}
+
+p {
+    font-family: 'Roboto', sans-serif;
+}
+
+@media (min-width:700px) {
+    #projects {
+        background-color: #e4e3f1;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 3em;
+    }
+    .split>* {
+        flex-basis: 50%;
+        min-width: 20em;
+    }
+}
