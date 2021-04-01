@@ -19,15 +19,17 @@ h1, h2, h3 {
 
 header {
     width: 100%;
-    height: 75x;
+    height: 75px;
     position: fixed;
+    z-index: 3;
 }
 
 .nav-container {
     width: 100%;
-    background-color: #599eec;
+    background-color: #b3ae6c;
     height: 100%;
     display: flex;
+    z-index: 2;
 }
 
 #navbar {
@@ -64,46 +66,50 @@ li {
 
 /*welcome section*/
 
+.gradient {
+    width: 100%;
+    height: 100vh;
+    background: radial-gradient(#edf7d4, #000000);
+    display: inline-block;
+    position: absolute;
+    margin: 0%;
+    opacity: 0.4;
+}
+
 #welcome-section {
+    width: 100%;
     height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: #8db9eb;
+    background-image: url(images/defenitivo.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 h1 {
     text-align: center;
     margin-bottom: 20px;
     font-size: 3em;
+    color: #edf7d4;
+    z-index: 2;
 }
 
 .second-title {
     text-align: center;
+    color: #edf7d4;
+    z-index: 2;
 }
 
 /*PROJECTS SECTION*/
 
 #projects {
-    background-color: #e4e3f1;
+    background-color: #1d170b;
+    margin: 0;
     width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.split {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.card-project {
-    margin: 2em;
-    background-color: #599eec;
-    width: 11em;
-    text-align: center;
+    height: 100%;
+    padding: 3%;
 }
 
 .projects-link {
@@ -117,8 +123,31 @@ a:visited {
     text-decoration: none;
 }
 
+.wrapper {
+    height: 100%;
+    padding: 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5em;
+    flex-wrap: wrap;
+}
+
+.box {
+    flex: 1em 0 10em;
+    background-color: #000000;
+}
+
+.card {
+    width: 100%;
+    background-color: #b3ae6c;
+    padding: 10px;
+    flex-basis: 200px;
+}
+
 .project-image {
-    width: 10em;
+    width: 100%;
     padding: 0.5em 0;
 }
 
@@ -134,24 +163,29 @@ a:visited {
 /*COMTACT*/
 
 #contact {
-    background-color: #8db9eb;
+    background-color: #b3ae6c;
     width: 100%;
     height: 50vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     text-align: center;
+    margin-top: auto;
 }
 
 h3 {
+    margin-top: 50px;
     font-size: 1em;
     text-align: center;
-    padding: 40px;
+    padding: 30px;
+    font-weight: 900;
 }
 
 .contac-links {
     margin-bottom: 20px;
     font-family: 'Roboto', sans-serif;
+    margin: auto;
+    font-weight: 1000;
 }
 
 #profile-link {
@@ -163,31 +197,57 @@ h3 {
 /*FOOTER*/
 
 footer {
-    background-color: #599eec;
+    background-color: #1d170b;
     width: 100%;
     height: 50px;
     text-align: center;
     padding: 20px;
     font-family: 'Roboto', sans-serif;
+    margin-top: auto;
 }
 
 p {
     font-family: 'Roboto', sans-serif;
+    color: #b3ae6c;
 }
 
-@media (min-width:700px) {
+/*MEDIA QUERY*/
+
+@media (min-width:900px) {
     #projects {
-        background-color: #e4e3f1;
         width: 100%;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: 3em;
+        height: 100%;
     }
-    .split>* {
-        flex-basis: 50%;
-        min-width: 20em;
+    .wrapper {
+        width: 100%;
+        height: 100%;
+        display: grid;
+        grid-template-columns: repeat(6, minmax(5em, 1fr));
+        grid-template-rows: repeat(8, minmax(5em, 1fr));
+        grid-gap: 10px;
+        justify-content: center;
+    }
+    .box {
+        margin-bottom: 20px;
+    }
+    .card {
+        width: 100%;
+        padding: 10px;
+    }
+    .project-image {
+        width: 100%;
+        display: inline;
+    }
+    .project-tile {
+        color: rgb(29, 26, 21);
+    }
+    .horizontal {
+        grid-column: span 4;
+        grid-row: span 4;
+        grid-column: 2/6;
+    }
+    .vertical {
+        grid-column: span 2;
+        grid-row: span 4;
     }
 }
